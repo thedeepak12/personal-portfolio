@@ -13,7 +13,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    height: 5.5rem;
     background: #be3144;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
@@ -21,13 +21,13 @@
 
 .nav-list {
     display: flex;
-    margin-right: 2rem;
+    margin-right: 4rem;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .nav-list a {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     text-decoration: none;
     color: white;
 }
@@ -49,12 +49,12 @@ ul {
 
 #welcome-section h1 {
     color: white;
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 #welcome-section p {
     color: #be3144;
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     font-style: italic;
 }
 
@@ -63,7 +63,7 @@ ul {
     padding-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 7rem;
     background: #45567d;
 }
 
@@ -81,11 +81,11 @@ ul {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(2, minmax(500px, 1fr));
     grid-gap: 4rem;
-    width: 100%;
+    width: 500px;
     max-width: 1280px;
-    margin: 0 auto 6rem auto;
+    margin: 0 10% 0 15%;
 }
 
 .project {
@@ -187,4 +187,100 @@ ul {
 
 svg {
     fill: white
+}
+
+@media (max-width: 1300px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        width: 80%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .project iframe {
+        height: 400px;
+    }
+
+    .projects-section-header {
+        font-size: 1.8rem;
+        max-width: 90%;
+        margin: 3rem auto;
+    }
+
+    .projects-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 712px) {
+    #welcome-section {
+        text-align: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .project iframe {
+        height: 300px;
+    }
+
+    .projects-section-header {
+        font-size: 1.5rem;
+        margin: 2rem auto;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .projects-section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .nav-list a {
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: white;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        width: 95%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .project iframe {
+        height: 250px;
+    }
+
+    .projects-section-header {
+        font-size: 1.2rem;
+        margin: 1.5rem auto;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .projects-section {
+        padding: 0.5rem;
+    }
 }
